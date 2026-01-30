@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QA Portfolio @ PTIT | Trịnh Thị Tuyết Anh</title>
+    <title>QA Portfolio | Trịnh Thị Tuyết Anh</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,86 +11,147 @@
 
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#home" class="logo">QAPortfolio</a>
+            <a href="#home" class="logo">QA @ PTIT</a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#achieve">Achieve</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achieve">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-overlay">
-            <div class="container hero-content">
-                <h1>Đảm Bảo Chất Lượng - Nâng Tầm Giá Trị</h1>
-                <p>Chào mừng đến với Portfolio của tôi - Chuyên viên QA tại Học viện Công nghệ Bưu chính Viễn thông (PTIT).</p>
-                <a href="#about" class="btn btn-primary">Tìm hiểu thêm</a>
-            </div>
+        <div class="hero-content">
+            <h1>Quality Assurance Engineer</h1>
+            <p>Trịnh Thị Tuyết Anh | PTIT Student | Software Tester</p>
+            <a href="#projects" class="btn btn-primary">Xem Portfolio</a>
         </div>
     </section>
 
     <section id="about" class="section-padding bg-lightblue">
         <div class="container about-container">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop" alt="QA Team working">
+                <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1964&auto=format&fit=crop" alt="Working on Laptop">
             </div>
             <div class="about-text">
-                <h2 class="section-title">Về Bản Thân & Vai Trò QA</h2>
-                <p class="subtitle">Chuyên viên Đảm bảo Chất lượng tại PTIT</p>
-                <p>
-                    Là một QA đang công tác tại PTIT, sứ mệnh của tôi là đảm bảo các sản phẩm phần mềm và hệ thống công nghệ thông tin của Học viện hoạt động ổn định, hiệu quả và đáp ứng các tiêu chuẩn cao nhất.
+                <h2 class="section-title">Giới Thiệu</h2>
+                <span class="subtitle">Đam mê công nghệ & Sự hoàn hảo</span>
+                <p style="color: var(--text-muted)">
+                    Là một sinh viên IT năm 3 tại PTIT, mình không chỉ viết code mà còn đam mê tìm ra những "bug" nhỏ nhất để đảm bảo sản phẩm đến tay người dùng là hoàn hảo. Tư duy phản biện và sự cẩn trọng là vũ khí chính của mình.
                 </p>
                 <ul class="skills-list">
-                    <li><i class="fas fa-check-circle"></i> Kiểm thử phần mềm (Manual & Automation)</li>
-                    <li><i class="fas fa-check-circle"></i> Xây dựng quy trình QA/QC</li>
-                    <li><i class="fas fa-check-circle"></i> Phân tích nghiệp vụ & Đảm bảo yêu cầu</li>
-                    <li><i class="fas fa-check-circle"></i> Tư duy logic & Cẩn thận tỉ mỉ</li>
+                    <li><i class="fas fa-terminal"></i> Automation Testing</li>
+                    <li><i class="fas fa-code"></i> Java / Python Core</li>
+                    <li><i class="fas fa-network-wired"></i> Network Protocols</li>
+                    <li><i class="fas fa-tasks"></i> Agile / Scrum</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="achieve" class="section-padding">
+    <section id="projects" class="section-padding">
         <div class="container">
-            <h2 class="section-title text-center">Thành Tựu & Dự Án Nổi Bật</h2>
-            <p class="text-center section-intro">Những cột mốc quan trọng trong quá trình làm việc và nghiên cứu.</p>
+            <h2 class="section-title text-center">Dự Án Thực Tế</h2>
             
-            <div class="achieve-grid">
-                <div class="achieve-card">
-                    <div class="icon-box">
-                        <i class="fas fa-medal"></i>
+            <div class="grid-layout">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Restaurant App">
                     </div>
-                    <h3>Chứng chỉ ISTQB</h3>
-                    <p>Đạt chứng chỉ quốc tế cấp cơ bản về kiểm thử phần mềm (ISTQB Foundation Level).</p>
-                </div>
-                <div class="achieve-card">
-                    <div class="icon-box">
-                        <i class="fas fa-bug"></i>
+                    <div class="card-content">
+                        <h3>Restaurant Management</h3>
+                        <span class="role-tag">Backend & QA</span>
+                        <p>Hệ thống quản lý nhà hàng full-stack. Chịu trách nhiệm viết Unit Test và đảm bảo không có lỗ hổng SQL Injection.</p>
+                        <a href="#" class="text-link">Xem Github <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Dự án Quản lý Đào tạo PTIT</h3>
-                    <p>Tham gia đội ngũ QA, giảm thiểu 40% lỗi nghiêm trọng trước khi triển khai hệ thống mới.</p>
                 </div>
-                <div class="achieve-card">
-                    <div class="icon-box">
-                        <i class="fas fa-chart-line"></i>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop" alt="AI Web">
                     </div>
-                    <h3>Cải tiến Quy trình</h3>
-                    <p>Đề xuất và áp dụng quy trình kiểm thử tự động hóa, rút ngắn 30% thời gian regression test.</p>
+                    <div class="card-content">
+                        <h3>Intelligent Web Research</h3>
+                        <span class="role-tag">Researcher</span>
+                        <p>Nghiên cứu các thuật toán AI tích hợp vào Web. Phân tích hiệu năng và tối ưu hóa tốc độ tải trang.</p>
+                        <a href="#" class="text-link">Xem Báo Cáo <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop" alt="Huawei Cloud">
+                    </div>
+                    <div class="card-content">
+                        <h3>Huawei ICT Competition</h3>
+                        <span class="role-tag">Cloud Track</span>
+                        <p>Thiết kế kiến trúc mạng trên nền tảng Huawei Cloud. Đạt điểm tối đa phần thực hành cấu hình Switch/Router.</p>
+                        <a href="#" class="text-link">Chi tiết <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achieve" class="section-padding bg-lightblue">
+        <div class="container">
+            <h2 class="section-title text-center">Chứng Chỉ & Giải Thưởng</h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <div class="achieve-img-box">
+                        <img src="https://images.unsplash.com/photo-1589330694653-46d2de65a247?q=80&w=2076&auto=format&fit=crop" alt="Cert">
+                    </div>
+                    <div class="card-content">
+                        <i class="fas fa-certificate icon-badge"></i>
+                        <h3>ISTQB Foundation</h3>
+                        <p>Chứng chỉ quốc tế dành cho Tester chuyên nghiệp.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="achieve-img-box">
+                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070&auto=format&fit=crop" alt="Scholarship">
+                    </div>
+                    <div class="card-content">
+                        <i class="fas fa-star icon-badge"></i>
+                        <h3>Học Bổng Khuyến Khích</h3>
+                        <p>Đạt GPA 3.6/4.0 trong năm học 2024-2025.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Liên Hệ</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info-box">
+                    <h3>Let's Connect!</h3>
+                    <p style="color: var(--text-muted)">Mình luôn sẵn sàng cho các cơ hội thực tập và làm việc.</p>
+                    <div class="info-item"><i class="fas fa-envelope"></i> tuyetanh@example.com</div>
+                    <div class="info-item"><i class="fas fa-phone"></i> 0987.654.321</div>
+                    <div class="social-icons-big">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Tuyet-Ah"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group"><input type="text" placeholder="Tên của bạn"></div>
+                    <div class="form-group"><input type="email" placeholder="Email"></div>
+                    <div class="form-group"><textarea rows="4" placeholder="Lời nhắn..."></textarea></div>
+                    <button class="btn btn-primary">Gửi đi</button>
+                </form>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Trịnh Thị Tuyết Anh | QAPortfolio. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/Tuyet-Ah" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
+            <p>&copy; 2026 Trịnh Thị Tuyết Anh. Built with ❤️ and Coffee.</p>
         </div>
     </footer>
 
@@ -98,9 +159,7 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>

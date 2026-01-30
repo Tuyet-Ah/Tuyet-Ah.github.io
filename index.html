@@ -3,92 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trịnh Thị Tuyết Anh | IT Portfolio</title>
+    <title>QA Portfolio @ PTIT | Trịnh Thị Tuyết Anh</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="main-container">
-        <aside class="profile-sidebar">
-            <div class="profile-header">
-                <img src="images/avatar.jpg" alt="Tuyet Anh" class="avatar">
-                <h1>Trịnh Thị Tuyết Anh</h1>
-                <p class="role">Sinh viên CNTT (Năm 3)</p>
-                <p class="school">Học viện Công nghệ Bưu chính Viễn thông (PTIT)</p>
-            </div>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>tuyetanh@example.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Hà Nội, Việt Nam</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/Tuyet-Ah" target="_blank">github.com/Tuyet-Ah</a>
-                </div>
-            </div>
 
-            <div class="tech-stack">
-                <h3>Ngôn ngữ & Công cụ</h3>
-                <div class="tags">
-                    <span>Java</span>
-                    <span>Python</span>
-                    <span>C++</span>
-                    <span>SQL</span>
-                    <span>Git</span>
-                    <span>HTML/CSS</span>
-                </div>
-            </div>
-        </aside>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">QA @ PTIT</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#achieve">Achieve</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <main class="content-area">
-            <section class="section">
-                <h2 class="section-title"><i class="fas fa-user"></i> Giới thiệu</h2>
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1>Đảm Bảo Chất Lượng - Nâng Tầm Giá Trị</h1>
+                <p>Chào mừng đến với Portfolio của tôi - Chuyên viên QA tại Học viện Công nghệ Bưu chính Viễn thông (PTIT).</p>
+                <a href="#about" class="btn btn-primary">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-lightblue">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop" alt="QA Team working">
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">Về Bản Thân & Vai Trò QA</h2>
+                <p class="subtitle">Chuyên viên Đảm bảo Chất lượng tại PTIT</p>
                 <p>
-                    Xin chào! Mình là sinh viên lớp <strong>D23CTCN01-B</strong>. 
-                    Mình có niềm đam mê lớn với <strong>Nghiên cứu khoa học</strong> và <strong>Kỹ thuật phần mềm</strong>. 
-                    Hiện tại, mình đang tập trung nghiên cứu sâu về các giao thức mạng (TCP/IP, OSI) và phát triển các ứng dụng quản lý thực tế.
+                    Là một QA đang công tác tại PTIT, sứ mệnh của tôi là đảm bảo các sản phẩm phần mềm và hệ thống công nghệ thông tin của Học viện hoạt động ổn định, hiệu quả và đáp ứng các tiêu chuẩn cao nhất.
                 </p>
-                <p>Mục tiêu sắp tới của mình là ứng tuyển vị trí Trợ lý IT để tích lũy kinh nghiệm thực tế.</p>
-            </section>
+                <ul class="skills-list">
+                    <li><i class="fas fa-check-circle"></i> Kiểm thử phần mềm (Manual & Automation)</li>
+                    <li><i class="fas fa-check-circle"></i> Xây dựng quy trình QA/QC</li>
+                    <li><i class="fas fa-check-circle"></i> Phân tích nghiệp vụ & Đảm bảo yêu cầu</li>
+                    <li><i class="fas fa-check-circle"></i> Tư duy logic & Cẩn thận tỉ mỉ</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <section class="section">
-                <h2 class="section-title"><i class="fas fa-code-branch"></i> Dự án & Hoạt động</h2>
-                
-                <div class="project-card">
-                    <h3>Restaurant Management Web</h3>
-                    <p class="time">01/2026 - Hiện tại</p>
-                    <p>Dự án xây dựng website quản lý nhà hàng, sử dụng Git để quản lý phiên bản.</p>
+    <section id="achieve" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Thành Tựu & Dự Án Nổi Bật</h2>
+            <p class="text-center section-intro">Những cột mốc quan trọng trong quá trình làm việc và nghiên cứu.</p>
+            
+            <div class="achieve-grid">
+                <div class="achieve-card">
+                    <div class="icon-box">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Chứng chỉ ISTQB</h3>
+                    <p>Đạt chứng chỉ quốc tế cấp cơ bản về kiểm thử phần mềm (ISTQB Foundation Level).</p>
                 </div>
+                <div class="achieve-card">
+                    <div class="icon-box">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Dự án Quản lý Đào tạo PTIT</h3>
+                    <p>Tham gia đội ngũ QA, giảm thiểu 40% lỗi nghiêm trọng trước khi triển khai hệ thống mới.</p>
+                </div>
+                <div class="achieve-card">
+                    <div class="icon-box">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Cải tiến Quy trình</h3>
+                    <p>Đề xuất và áp dụng quy trình kiểm thử tự động hóa, rút ngắn 30% thời gian regression test.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <h3>Nghiên cứu: Intelligent Web</h3>
-                    <p class="time">01/2026</p>
-                    <p>Đề tài nghiên cứu nhóm về các công nghệ Web thông minh và xu hướng phát triển.</p>
-                </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Trịnh Thị Tuyết Anh | QA @ PTIT. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/Tuyet-Ah" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 
-                <div class="project-card">
-                    <h3>Huawei ICT Competition 2025-2026</h3>
-                    <p>Thí sinh tham dự cuộc thi, tìm hiểu về Cloud Computing và hạ tầng mạng.</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Học vấn</h2>
-                <div class="timeline-item">
-                    <h3>Hệ thống File & Hệ điều hành (OS)</h3>
-                    <p>Đã hoàn thành học phần chuyên sâu về quản lý tiến trình và hệ thống tệp tin.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Mạng máy tính</h3>
-                    <p>Nắm vững kiến thức về Network Topology, Subnetting và Email Protocols.</p>
-                </div>
-            </section>
-        </main>
-    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

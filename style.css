@@ -1,54 +1,314 @@
+/* --- Cấu hình màu sắc chủ đạo (Light Blue Theme) --- */
+:root {
+    --primary-color: #3498db;      /* Màu xanh dương chính (đậm vừa) cho nút, tiêu đề */
+    --secondary-color: #2c3e50;    /* Màu xanh đen cho văn bản chính */
+    --light-blue-bg: #eaf6ff;      /* Màu nền xanh rất nhạt cho các section */
+    --lighter-blue-bg: #f4faff;    /* Màu nền xanh cực nhạt cho toàn trang */
+    --accent-blue: #85c1e9;        /* Màu xanh điểm nhấn (icon, hover) */
+    --white: #ffffff;
+    --text-gray: #555;
+    --shadow: 0 5px 15px rgba(52, 152, 219, 0.15); /* Đổ bóng màu xanh nhẹ */
+}
+
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Cuộn trang mượt mà */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
+    color: var(--secondary-color);
+    background-color: var(--lighter-blue-bg);
 }
 
+/* --- Các class tiện ích chung --- */
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.text-center { text-align: center; }
+
+.bg-lightblue {
+    background-color: var(--light-blue-bg);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+/* Gạch chân trang trí dưới tiêu đề */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-blue);
+    margin-top: 10px;
+}
+
+.text-center .section-title::after {
+    margin: 10px auto 0; /* Căn giữa gạch chân nếu tiêu đề căn giữa */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed; /* Cố định trên cùng */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+/* Hiệu ứng hover menu */
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Phần 1: Home (Hero Section) --- */
+.hero {
+    height: 100vh; /* Chiều cao bằng màn hình */
+    /* Ảnh nền công nghệ */
+    background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hiệu ứng parallax nhẹ khi cuộn */
+    position: relative;
+    margin-top: 70px; /* Tránh bị navbar che */
+}
+
+/* Lớp phủ màu xanh để làm nổi bật chữ */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.7); /* Màu tối pha xanh */
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: var(--white);
     max-width: 800px;
-    margin: 0 auto; /* Căn giữa trang web */
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Làm tròn ảnh */
-    object-fit: cover;
-    border: 4px solid white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-h1 { color: #2c3e50; }
-
-.card {
-    background: white;
-    padding: 20px;
+.hero-content h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* --- Phần 2: About Us --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image, .about-text {
+    flex: 1; /* Chia đôi không gian */
+}
+
+.about-image img {
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow);
+    border: 5px solid var(--white);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-gray);
 }
 
 .skills-list {
     list-style: none;
-    padding: 0;
 }
 
 .skills-list li {
-    display: inline-block;
-    background: #e1f5fe;
-    color: #0277bd;
-    padding: 5px 15px;
-    margin: 5px;
-    border-radius: 20px;
-    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
-a { color: #007bff; text-decoration: none; }
+.skills-list i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* --- Phần 3: Achieve --- */
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: var(--text-gray);
+}
+
+.achieve-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tự động chia cột */
+    gap: 30px;
+}
+
+.achieve-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+/* Hiệu ứng khi di chuột vào thẻ thành tựu */
+.achieve-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--primary-color);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--light-blue-bg);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 25px;
+}
+
+.achieve-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.achieve-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--light-blue-bg);
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Tạm ẩn menu trên mobile cho đơn giản */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-container {
+        flex-direction: column; /* Xếp chồng dọc trên mobile */
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+    }
+}

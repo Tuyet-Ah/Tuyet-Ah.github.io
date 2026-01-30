@@ -1,180 +1,136 @@
-/* --- Cấu hình Dark Theme (Deep Cyber Blue) --- */
+/* --- CẤU HÌNH DARK THEME --- */
 :root {
-    --primary-color: #38bdf8;      /* Xanh dương sáng (Sky Blue) để nổi trên nền đen */
-    --accent-color: #0ea5e9;       /* Xanh đậm hơn cho hover */
-    --bg-body: #0f172a;            /* Màu nền chính (Dark Slate) */
-    --bg-card: #1e293b;            /* Màu nền thẻ (Sáng hơn nền chính chút) */
-    --bg-secondary: #162032;       /* Màu nền phụ (Thay cho màu light-blue cũ) */
-    --text-main: #f1f5f9;          /* Màu chữ chính (Trắng xám) */
-    --text-muted: #94a3b8;         /* Màu chữ phụ (Xám nhạt) */
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Đổ bóng đậm hơn */
-    --border-glow: 1px solid rgba(56, 189, 248, 0.2); /* Viền phát sáng nhẹ */
+    --primary: #38bdf8;       /* Xanh dương sáng */
+    --accent: #0ea5e9;        /* Xanh dương đậm */
+    --bg-dark: #0f172a;       /* Nền tối chính */
+    --bg-card: #1e293b;       /* Nền thẻ */
+    --text-main: #f1f5f9;     /* Chữ trắng */
+    --text-gray: #94a3b8;     /* Chữ xám */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-main);
-    background-color: var(--bg-body);
-}
-
-/* Utilities */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+/* Tiện ích chung */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .section-padding { padding: 80px 0; }
 .text-center { text-align: center; }
+.bg-secondary { background-color: #162032; } /* Màu nền phụ */
 
-/* Class này tên là bg-lightblue từ code cũ, nhưng giờ mình đổi thành màu tối phụ */
-.bg-lightblue { background-color: var(--bg-secondary); }
-
+/* Tiêu đề Section */
 .section-title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 3rem;
-    position: relative;
-    display: inline-block;
+    font-size: 2.5rem; color: var(--primary); margin-bottom: 40px;
+    position: relative; display: inline-block;
 }
-
 .text-center .section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--accent-color);
-    margin: 10px auto 0;
-    border-radius: 2px;
-    box-shadow: 0 0 10px var(--accent-color); /* Hiệu ứng neon */
+    content: ''; display: block; width: 60px; height: 4px; 
+    background: var(--accent); margin: 10px auto 0;
 }
 
+/* Nút bấm */
 .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
-    cursor: pointer;
-    border: none;
+    display: inline-block; padding: 12px 30px; border-radius: 30px;
+    text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; border: none;
 }
-.btn-primary { 
-    background-color: var(--primary-color); 
-    color: #0f172a; /* Chữ trên nút màu tối cho dễ đọc */
-}
-.btn-primary:hover { 
-    background-color: var(--white); 
-    color: var(--accent-color);
-    box-shadow: 0 0 15px var(--primary-color); /* Hiệu ứng phát sáng khi hover */
-}
+.btn-primary { background: var(--primary); color: var(--bg-dark); }
+.btn-primary:hover { background: #fff; box-shadow: 0 0 15px var(--primary); }
+.btn-outline { border: 2px solid var(--primary); color: var(--primary); margin-top: 20px; }
+.btn-outline:hover { background: var(--primary); color: var(--bg-dark); }
 
-/* --- Navbar (Dark) --- */
+/* --- NAVBAR --- */
 .navbar {
-    background-color: rgba(15, 23, 42, 0.95); /* Màu tối trong suốt */
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.95); position: fixed; top: 0; width: 100%; z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    position: fixed; top: 0; width: 100%; z-index: 1000;
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-color); text-decoration: none; text-shadow: 0 0 10px rgba(56,189,248,0.4); }
-.nav-links { list-style: none; display: flex; }
-.nav-links li { margin-left: 25px; }
-.nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; transition: color 0.3s; }
-.nav-links a:hover { color: var(--primary-color); }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { color: var(--text-gray); text-decoration: none; font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
 
-/* --- Hero --- */
+/* --- HERO SECTION --- */
 .hero {
-    height: 100vh;
-    /* Ảnh nền tối hơn một chút bằng lớp phủ */
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop') center/cover fixed;
-    position: relative;
-    display: flex; align-items: center; justify-content: center;
+    height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070') center/cover;
 }
-.hero-content { text-align: center; max-width: 800px; padding-top: 60px; }
-.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; color: white; text-shadow: 0 0 20px rgba(56,189,248,0.3); }
-.hero-content p { font-size: 1.2rem; margin-bottom: 30px; color: var(--text-muted); }
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 15px; color: #fff; }
+.hero-content p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 30px; }
 
-/* --- About --- */
-.about-container { display: flex; align-items: center; gap: 50px; }
-.about-image img { width: 100%; border-radius: 15px; box-shadow: var(--shadow); border: 2px solid rgba(255,255,255,0.1); }
-.about-text { flex: 1; }
-.subtitle { color: var(--primary-color); font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; display: block; }
-.skills-list { list-style: none; margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.skills-list li { color: var(--text-muted); }
-.skills-list li i { color: var(--primary-color); margin-right: 10px; }
-
-/* --- Grid Layout (Cards) --- */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+/* --- ABOUT SECTION (ĐÃ CHỈNH SỬA) --- */
+.about-container { display: flex; align-items: center; gap: 60px; }
+.about-image { flex: 1; }
+.about-image img { 
+    width: 100%; border-radius: 20px; 
+    border: 4px solid rgba(56, 189, 248, 0.2); 
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
+.about-text { flex: 1.5; }
 
+/* Thẻ thông tin cá nhân */
+.profile-card {
+    background: var(--bg-card); padding: 20px; border-radius: 10px;
+    margin-bottom: 25px; border-left: 4px solid var(--primary);
+}
+.profile-item { display: flex; margin-bottom: 10px; font-size: 1.1rem; }
+.profile-item:last-child { margin-bottom: 0; }
+.label { width: 140px; color: var(--text-gray); font-weight: 600; }
+.label i { width: 20px; color: var(--primary); margin-right: 5px; }
+.value { color: #fff; font-weight: bold; }
+.bio-text p { margin-bottom: 15px; color: var(--text-gray); }
+
+/* --- ACHIEVE SECTION --- */
+.grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .card {
-    background: var(--bg-card);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.05); /* Viền mỏng tinh tế */
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: var(--bg-card); padding: 30px; border-radius: 15px;
+    transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.05);
 }
+.card:hover { transform: translateY(-10px); border-color: var(--primary); }
+.card-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+.card h3 { margin-bottom: 10px; }
+.card p { color: var(--text-gray); font-size: 0.9rem; }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    border-color: var(--primary-color); /* Viền sáng lên khi hover */
-}
-
-/* Images */
-.card-image img, .achieve-img-box img { width: 100%; height: 200px; object-fit: cover; opacity: 0.9; }
-
-.card-content { padding: 25px; }
-.card h3 { color: var(--text-main); margin-bottom: 10px; font-size: 1.3rem; }
-.card p { color: var(--text-muted); font-size: 0.95rem; }
-
-.role-tag { 
-    display: inline-block; background: rgba(56, 189, 248, 0.1); color: var(--primary-color); 
-    padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; border: 1px solid rgba(56, 189, 248, 0.2);
-}
-.text-link { color: var(--primary-color); text-decoration: none; font-weight: bold; margin-top: 15px; display: inline-block; }
-.text-link:hover { text-shadow: 0 0 8px var(--primary-color); }
-.icon-badge { font-size: 2rem; color: #facc15; margin-bottom: 15px; display: block; }
-
-/* --- Contact Section --- */
+/* --- CONTACT SECTION (MỚI) --- */
 .contact-wrapper {
-    display: flex; gap: 50px; 
-    background: var(--bg-card);
-    padding: 50px; border-radius: 20px; 
-    box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,0.05);
+    display: flex; gap: 50px; background: var(--bg-card);
+    padding: 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);
 }
+.contact-info { flex: 1; }
+.contact-desc { margin-bottom: 30px; color: var(--text-gray); }
+.info-row { display: flex; align-items: center; margin-bottom: 25px; }
+.icon-box { 
+    width: 50px; height: 50px; background: rgba(56,189,248,0.1); 
+    color: var(--primary); display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; margin-right: 15px; font-size: 1.2rem;
+}
+.info-row h4 { font-size: 0.9rem; color: var(--text-gray); }
+.info-row p { font-weight: bold; }
 
-.contact-info-box h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main); }
-.info-item { display: flex; align-items: center; margin-bottom: 20px; font-size: 1.1rem; color: var(--text-muted); }
-.info-item i { width: 40px; height: 40px; background: rgba(56, 189, 248, 0.1); color: var(--primary-color); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 15px; }
-.social-icons-big a { font-size: 2rem; color: var(--text-muted); margin-right: 20px; transition: color 0.3s; }
-.social-icons-big a:hover { color: var(--primary-color); }
+.social-media { margin-top: 30px; }
+.social-media a {
+    display: inline-flex; width: 40px; height: 40px; 
+    background: var(--bg-dark); color: var(--text-gray);
+    align-items: center; justify-content: center; border-radius: 50%;
+    margin-right: 10px; text-decoration: none; transition: 0.3s;
+}
+.social-media a:hover { background: var(--primary); color: #fff; }
 
-/* Form Dark Mode */
-.contact-form { flex: 1.5; }
+/* Contact Form */
+.contact-form { flex: 1.2; }
 .form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--text-gray); font-size: 0.9rem; }
 .form-group input, .form-group textarea {
-    width: 100%; padding: 15px; 
-    background-color: var(--bg-body); /* Input nền tối */
-    border: 1px solid rgba(255,255,255,0.1); 
-    color: var(--text-main);
-    border-radius: 10px;
-    font-family: inherit; transition: border 0.3s;
+    width: 100%; padding: 12px; background: var(--bg-dark);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+    color: #fff; outline: none; transition: 0.3s;
 }
-.form-group input:focus, .form-group textarea:focus { 
-    border-color: var(--primary-color); outline: none; 
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.1);
-}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
 
-/* Footer */
-footer { background: #0b1120; color: var(--text-muted); padding: 30px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); }
+/* FOOTER */
+footer { background: #0b1120; text-align: center; padding: 20px; font-size: 0.9rem; color: var(--text-gray); margin-top: 50px; }
 
-/* Mobile */
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .about-container, .contact-wrapper { flex-direction: column; }
-    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content h1 { font-size: 2.5rem; }
 }

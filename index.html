@@ -3,37 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuyet Anh - Portfolio</title>
+    <title>Trịnh Thị Tuyết Anh | IT Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="images/avatar.jpg" alt="Tuyet Anh Avatar" class="avatar">
-            <h1>Chào, mình là Tuyết Anh 👋</h1>
-            <p>Sinh viên CNTT @ PTIT | Đam mê Lập trình & Mạng máy tính</p>
-        </header>
+    <div class="main-container">
+        <aside class="profile-sidebar">
+            <div class="profile-header">
+                <img src="images/avatar.jpg" alt="Tuyet Anh" class="avatar">
+                <h1>Trịnh Thị Tuyết Anh</h1>
+                <p class="role">Sinh viên CNTT (Năm 3)</p>
+                <p class="school">Học viện Công nghệ Bưu chính Viễn thông (PTIT)</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>tuyetanh@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Hà Nội, Việt Nam</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Tuyet-Ah" target="_blank">github.com/Tuyet-Ah</a>
+                </div>
+            </div>
 
-        <section class="card">
-            <h2>🚀 Về bản thân</h2>
-            <p>Mình là sinh viên lớp D23CTCN01-B. Mình yêu thích tìm hiểu về công nghệ, đặc biệt là lập trình backend và hệ thống mạng. Hiện tại mình đang nghiên cứu về Intelligent Web và Cloud Computing.</p>
-        </section>
+            <div class="tech-stack">
+                <h3>Ngôn ngữ & Công cụ</h3>
+                <div class="tags">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>C++</span>
+                    <span>SQL</span>
+                    <span>Git</span>
+                    <span>HTML/CSS</span>
+                </div>
+            </div>
+        </aside>
 
-        <section class="card">
-            <h2>💻 Kỹ năng</h2>
-            <ul class="skills-list">
-                <li>Java / Python / C++</li>
-                <li>SQL / Data Structures</li>
-                <li>Computer Networking</li>
-                <li>Git / GitHub</li>
-            </ul>
-        </section>
+        <main class="content-area">
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-user"></i> Giới thiệu</h2>
+                <p>
+                    Xin chào! Mình là sinh viên lớp <strong>D23CTCN01-B</strong>. 
+                    Mình có niềm đam mê lớn với <strong>Nghiên cứu khoa học</strong> và <strong>Kỹ thuật phần mềm</strong>. 
+                    Hiện tại, mình đang tập trung nghiên cứu sâu về các giao thức mạng (TCP/IP, OSI) và phát triển các ứng dụng quản lý thực tế.
+                </p>
+                <p>Mục tiêu sắp tới của mình là ứng tuyển vị trí Trợ lý IT để tích lũy kinh nghiệm thực tế.</p>
+            </section>
 
-        <footer class="card">
-            <h2>📬 Liên hệ</h2>
-            <p>Email: tuyetanh@example.com</p>
-            <p><a href="https://github.com/Tuyet-Ah">GitHub của mình</a></p>
-        </footer>
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-code-branch"></i> Dự án & Hoạt động</h2>
+                
+                <div class="project-card">
+                    <h3>Restaurant Management Web</h3>
+                    <p class="time">01/2026 - Hiện tại</p>
+                    <p>Dự án xây dựng website quản lý nhà hàng, sử dụng Git để quản lý phiên bản.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Nghiên cứu: Intelligent Web</h3>
+                    <p class="time">01/2026</p>
+                    <p>Đề tài nghiên cứu nhóm về các công nghệ Web thông minh và xu hướng phát triển.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Huawei ICT Competition 2025-2026</h3>
+                    <p>Thí sinh tham dự cuộc thi, tìm hiểu về Cloud Computing và hạ tầng mạng.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Học vấn</h2>
+                <div class="timeline-item">
+                    <h3>Hệ thống File & Hệ điều hành (OS)</h3>
+                    <p>Đã hoàn thành học phần chuyên sâu về quản lý tiến trình và hệ thống tệp tin.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Mạng máy tính</h3>
+                    <p>Nắm vững kiến thức về Network Topology, Subnetting và Email Protocols.</p>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
